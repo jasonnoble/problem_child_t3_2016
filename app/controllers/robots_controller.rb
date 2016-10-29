@@ -1,8 +1,9 @@
-class RobotsController
+class RobotsController < ApplicationController
+  before_action :set_robot, only: [:show, :edit, :update, :destroy]
   # GET /robots
   # GET /robots.json
   def index
-    @robots = Rubot.all
+    @robots = Robot.all
   end
 
   # GET /robots/1
