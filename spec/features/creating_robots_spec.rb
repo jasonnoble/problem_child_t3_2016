@@ -18,6 +18,25 @@ feature 'Creating robots' do
   end
 end
 
+feature 'Editing robots' do
+  scenario 'can edit existing robot' do
+    make_robot
+    click_link 'Edit', match: :first
+    fill_in 'Serial number', with: '9999999999z'
+    click_button 'Update Robot'
+    expect(page).to have_content('Robot was successfully updated.')
+  end
+end
+
+feature 'Delete robots' do
+  scenario 'can delete a robot' do
+    make_robot
+    click_link 'Back'
+    click_link 'Destroy'
+    expect(page).to have_content('Robot was successfully destroyed.')
+  end
+end
+
 private
 
 def make_robot
