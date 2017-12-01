@@ -1,8 +1,8 @@
-class RobotsController
+class RobotsController < ApplicationController
   # GET /robots
   # GET /robots.json
   def index
-    @robots = Rubot.all
+    @robots = Robot.all
   end
 
   # GET /robots/1
