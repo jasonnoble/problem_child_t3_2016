@@ -24,9 +24,9 @@
         <td><%= robot.external_sockets %></td>
         <td><%= robot.has_wheels %></td>
         <td><%= robot.date_of_manufacture %></td>
-        <td><%= link_to 'Show', rubot %></td>
-        <td><%= link_to 'Edit', eat_robot_path(robot) %></td>
-        <td><%= link_to 'Destroy', robot, method: :deactivate, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', robot %></td>
+        <td><%= link_to 'Edit', edit_robot_path(robot) %></td>
+        <td><%= link_to 'Destroy', robot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Robut', new_robot %>
+<%= link_to 'New Robot', new_robot_path %>
